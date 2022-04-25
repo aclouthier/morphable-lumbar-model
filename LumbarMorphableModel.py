@@ -84,8 +84,8 @@ def createSpine(var,y,ssm_dir,fname):
 var = 'Female'
 y = 0
 
-ssm_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM'
-out_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code'
+ssm_dir = r'C:\Documents\lumbar-morphable-model\SSM'
+out_dir = r'C:\Documents\lumbar-morphable-model\'
 fname = os.path.join(out_dir, var + '_%.2f.stl' % y)
 
 spine = createSpine(var,y,ssm_dir,fname)
@@ -96,8 +96,8 @@ spine = createSpine(var,y,ssm_dir,fname)
 # In this example, the mean facet angle is morphed across the observed range.
 
 var = 'meanFacetAngle'
-ssm_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM'
-animation_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\anim'
+ssm_dir = r'C:\Documents\lumbar-morphable-model\SSM'
+animation_dir = r'C:\Documents\lumbar-morphable-model\animation'
 
 # [mean(y),min(y),max(y)]
 ystats = np.genfromtxt(os.path.join(ssm_dir,var + '_y.csv'),delimiter=',')
