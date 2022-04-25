@@ -37,9 +37,9 @@ y = 1;
 
 % Set local directories:
 % Directory containing csv files for the statistical shape models
-ssmdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM';
+ssmdir = 'C:\Documents\lumbar-morphable-model\SSM';
 % Directory to write .stl to
-outdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\';
+outdir = 'C:\Documents\lumbar-morphable-model\';
 
 % --------------------------------------- %
 % ------------ Generate mesh ------------ %
@@ -74,9 +74,9 @@ stlwrite(fullfile(outdir,[var '_' num2str(y) '.stl']),cns,pts);
 var = 'meanVBwedge';
 
 % Directory containing csv files for the statistical shape models
-ssmdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM';
+ssmdir = 'C:\Documents\lumbar-morphable-model\SSM';
 % Directory to write folder containing multiple stl files for animation
-outdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\';
+outdir = 'C:\Documents\lumbar-morphable-model\';
 
 if ~exist(fullfile(outdir,'animation'),'dir')
     mkdir(fullfile(outdir,'animation'))
