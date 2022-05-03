@@ -1,6 +1,6 @@
 # A morphable model of the lumbar spine
 
-This responsitory contains the data for a morphable model of the lumbar spine. A statstical shape model was created from the lumbar vertebrae (L2-L5) of 87 patients. Partial least squares regression was used to generate statistical shape models that can be morphed according to:
+This repository contains the data for a morphable model of the lumbar spine. A statstical shape model was created from the lumbar vertebrae (L2-L5) of 87 patients. Partial least squares regression was used to generate statistical shape models that can be morphed according to:
 - Disc herniation status (yes/no)
 - Spondylolisthesis status (yes/no)
 - Sex 
