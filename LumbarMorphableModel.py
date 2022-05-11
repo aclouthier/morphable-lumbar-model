@@ -31,10 +31,7 @@ import os
 
 def createSpine(var,y,ssm_dir,fname):
     '''
-    Generate simulated marker trajectories to use for training the machine learning-
-    based marker labelling algorithm. Trajectories are generated based on the defined 
-    OpenSim (https://simtk.org/projects/opensim) marker set using body kinematics
-    for up to 100 participants performing a series of athletic movements.
+    Create an instance of the morphable model.
 
     Parameters
     ----------
