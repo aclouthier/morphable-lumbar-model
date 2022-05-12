@@ -82,7 +82,7 @@ var = 'Female'
 y = 0
 
 ssm_dir = r'C:\Documents\lumbar-morphable-model\SSM'
-out_dir = r'C:\Documents\lumbar-morphable-model\'
+out_dir = r'C:\Documents\lumbar-morphable-model'
 fname = os.path.join(out_dir, var + '_%.2f.stl' % y)
 
 spine = createSpine(var,y,ssm_dir,fname)
