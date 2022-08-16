@@ -1,4 +1,4 @@
-* A manuscripit with details about this project is currently under review.
+** A manuscripit with details about this project is currently under review.
 
 # A morphable model of the lumbar spine
 
