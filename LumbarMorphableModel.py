@@ -9,15 +9,21 @@
    Age
        - 'ApproxAge': observed range for y is 30-90
    Measurements
-       - 'meanCanalDepth': observed range for y is 13.0- 20.4 mm
-       - 'meanCanalWidth': observed range for y is 21.5 - 31.8 mm
-       - 'meanDiscHeight': observed range for y is  3.1 - 11.4 mm
-       - 'meanDiscWedge':  observed range for y is  0.4 - 11.6 deg
-       - 'meanFacetAngle': observed range for y is 27.6 - 85.8 deg
-       - 'meanVBdepth':    observed range for y is 29.5 - 42.0 mm
-       - 'meanVBheight':   observed range for y is 23.5 - 32.4 mm
-       - 'meanVBwidth':    observed range for y is 39.4 - 58.8 mm
-       - 'meanVBwedge':    observed range for y is -3.5 - 8.7 deg
+       - 'meanCanalDepth':     observed range for y is 13.0- 20.4 mm
+       - 'meanCanalWidth':     observed range for y is 21.5 - 31.8 mm
+       - 'meanDiscHeight':     observed range for y is  3.1 - 11.4 mm
+       - 'meanDiscWedge':      observed range for y is  0.4 - 11.6 deg
+       - 'meanEndplateAreaSup': observed range for y is 10.0 - 23.0 cm^2
+       - 'meanEndplateAreaInf': observed range for y is 9.6 - 21.6 cm^2
+       - 'meanFacetAngle':     observed range for y is 27.6 - 85.8 deg
+       - 'meanFacetAreaSup':   observed range for y is 0.8 - 2.0 cm^2
+       - 'meanFacetAreaInf':   observed range for y is 1.1 - 2.2 cm^2
+       - 'meanSPlength':       observed range for y is 43.0 - 61.0 mm
+       - 'meanSPheight':       observed range for y is 16.6 - 31.0 mm
+       - 'meanVBdepth':        observed range for y is 29.5 - 42.0 mm
+       - 'meanVBheight':       observed range for y is 23.5 - 32.4 mm
+       - 'meanVBwidth':        observed range for y is 39.4 - 58.8 mm
+       - 'meanVBwedge':        observed range for y is -3.5 - 8.7 deg
 
  Author: A Clouthier
  Source: https://github.com/aclouthier/morphable-lumbar-model
@@ -31,7 +37,10 @@ import os
 
 def createSpine(var,y,ssm_dir,fname):
     '''
-    Create an instance of the morphable model.
+    Generate simulated marker trajectories to use for training the machine learning-
+    based marker labelling algorithm. Trajectories are generated based on the defined 
+    OpenSim (https://simtk.org/projects/opensim) marker set using body kinematics
+    for up to 100 participants performing a series of athletic movements.
 
     Parameters
     ----------
@@ -81,8 +90,8 @@ def createSpine(var,y,ssm_dir,fname):
 var = 'Female'
 y = 0
 
-ssm_dir = r'C:\Documents\lumbar-morphable-model\SSM'
-out_dir = r'C:\Documents\lumbar-morphable-model'
+ssm_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM'
+out_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code'
 fname = os.path.join(out_dir, var + '_%.2f.stl' % y)
 
 spine = createSpine(var,y,ssm_dir,fname)
@@ -93,8 +102,8 @@ spine = createSpine(var,y,ssm_dir,fname)
 # In this example, the mean facet angle is morphed across the observed range.
 
 var = 'meanFacetAngle'
-ssm_dir = r'C:\Documents\lumbar-morphable-model\SSM'
-animation_dir = r'C:\Documents\lumbar-morphable-model\animation'
+ssm_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM'
+animation_dir = r'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\anim'
 
 # [mean(y),min(y),max(y)]
 ystats = np.genfromtxt(os.path.join(ssm_dir,var + '_y.csv'),delimiter=',')

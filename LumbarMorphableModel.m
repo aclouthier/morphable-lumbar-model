@@ -7,15 +7,22 @@
 %   Age
 %       - 'ApproxAge': observed range for y is 30-90
 %   Measurements
-%       - 'meanCanalDepth': observed range for y is 13.0- 20.4 mm
-%       - 'meanCanalWidth': observed range for y is 21.5 - 31.8 mm
-%       - 'meanDiscHeight': observed range for y is  3.1 - 11.4 mm
-%       - 'meanDiscWedge':  observed range for y is  0.4 - 11.6 deg
-%       - 'meanFacetAngle': observed range for y is 27.6 - 85.8 deg
-%       - 'meanVBdepth':    observed range for y is 29.5 - 42.0 mm
-%       - 'meanVBheight':   observed range for y is 23.5 - 32.4 mm
-%       - 'meanVBwidth':    observed range for y is 39.4 - 58.8 mm
-%       - 'meanVBwedge':    observed range for y is -3.5 - 8.7 deg
+%       - 'meanCanalDepth':     observed range for y is 13.0- 20.4 mm
+%       - 'meanCanalWidth':     observed range for y is 21.5 - 31.8 mm
+%       - 'meanDiscHeight':     observed range for y is  3.1 - 11.4 mm
+%       - 'meanDiscWedge':      observed range for y is  0.4 - 11.6 deg
+%       - 'meanEndplateAreaSup': observed range for y is 10.0 - 23.0 cm^2
+%       - 'meanEndplateAreaInf': observed range for y is 9.6 - 21.6 cm^2
+%       - 'meanFacetAngle':     observed range for y is 27.6 - 85.8 deg
+%       - 'meanFacetAreaSup':   observed range for y is 0.8 - 2.0 cm^2
+%       - 'meanFacetAreaInf':   observed range for y is 1.1 - 2.2 cm^2
+%       - 'meanSPlength':       observed range for y is 43.0 - 61.0 mm
+%       - 'meanSPheight':       observed range for y is 16.6 - 31.0 mm
+%       - 'meanVBdepth':        observed range for y is 29.5 - 42.0 mm
+%       - 'meanVBheight':       observed range for y is 23.5 - 32.4 mm
+%       - 'meanVBwidth':        observed range for y is 39.4 - 58.8 mm
+%       - 'meanVBwedge':        observed range for y is -3.5 - 8.7 deg
+
 
 % Author: A Clouthier
 % Source: https://github.com/aclouthier/morphable-lumbar-model
@@ -33,13 +40,13 @@
 % --------------------------------------- %
 % Enter the variable and y-value of interest. Options are listed above.
 var = 'Spondylolisthesis';
-y = 1;
+y = 1.5;
 
 % Set local directories:
 % Directory containing csv files for the statistical shape models
-ssmdir = 'C:\Documents\lumbar-morphable-model\SSM';
+ssmdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM';
 % Directory to write .stl to
-outdir = 'C:\Documents\lumbar-morphable-model\';
+outdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\';
 
 % --------------------------------------- %
 % ------------ Generate mesh ------------ %
@@ -74,9 +81,9 @@ stlwrite(fullfile(outdir,[var '_' num2str(y) '.stl']),cns,pts);
 var = 'meanVBwedge';
 
 % Directory containing csv files for the statistical shape models
-ssmdir = 'C:\Documents\lumbar-morphable-model\SSM';
+ssmdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\SSM';
 % Directory to write folder containing multiple stl files for animation
-outdir = 'C:\Documents\lumbar-morphable-model\';
+outdir = 'C:\Users\aclouthi\OneDrive - University of Ottawa\Documents\Projects\2Dto3D\Lumbar\Manuscript\code\';
 
 if ~exist(fullfile(outdir,'animation'),'dir')
     mkdir(fullfile(outdir,'animation'))
