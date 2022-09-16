@@ -8,10 +8,16 @@ This repository contains the data for a morphable model of the lumbar spine. A s
 - Sex 
 - Age
 - Mean facet angle (mean across L2-L5)
+- Mean superior facets area 
+- Mean inferior facets area
 - Mean vertebral body depth
 - Mean vertebral body height
 - Mean vertebral body width
 - Mean vertebral body wedge angle
+- Mean superior endplate area
+- Mean inferior endplate area
+- Mean spinous process length
+- Mean spinous process height
 - Mean spinal canal depth 
 - Mean spinal canal width
 - Mean intervertebral disc height
